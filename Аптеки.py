@@ -16,7 +16,7 @@ print(nltk.data.path)
 st.set_page_config(layout="wide")
 nltk.download("punkt")
 nltk.download("stopwords")
-
+nltk.data.path.append("./nltk_data")
 # --- Словарь: номер аптеки → район ---
 pharmacy_districts = {
     '34': 'Жетысуский', '40': 'Бостандыкский', '57': 'Жетысуский', '58': 'Алатауский',
