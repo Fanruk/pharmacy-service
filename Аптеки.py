@@ -53,7 +53,7 @@ def stem_text(text):
 @st.cache_data
 def load_data():
     url_id = "1Mrkl_Fm59su0UddWNGo0vLAWklgDOIhF"
-    url1 = f"https://drive.google.com/uc?id={file_id}"
+    url1 = f"https://drive.google.com/uc?id={url_id}"
     df = pd.read_csv(url)
     df["Категории_строка"] = df["Категории"].apply(
         lambda x: " ".join(eval(x)) if isinstance(x, str) and x.startswith("[") else ""
