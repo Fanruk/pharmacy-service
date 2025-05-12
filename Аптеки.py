@@ -89,7 +89,7 @@ def search_products(query, top_n=5, selected_district=None):
     return results[["Название", "Описание", "Цена", "Аптеки", "Районы", "Изображение"]]
 
 # --- OpenRouter API ---
-API_KEY = "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"
+API_KEY = "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"
 client = OpenAI(base_url="https://openrouter.ai/api/v1", api_key=API_KEY)
 
 def get_product_recommendations(product_name):
