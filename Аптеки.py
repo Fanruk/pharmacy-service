@@ -10,13 +10,12 @@ from sklearn.metrics.pairwise import cosine_similarity
 from openai import OpenAI
 from dotenv import load_dotenv
 import os
-nltk.download("punkt", quiet=True, force=True)
+
 nltk.download("stopwords", quiet=True, force=True)
-print(nltk.data.path)
 st.set_page_config(layout="wide")
-nltk.download("punkt")
-nltk.download("stopwords")
-nltk.data.path.append("./nltk_data")
+nltk_data_path = os.path.join(os.getcwd(), "nltk_data")
+nltk.data.path.append(nltk_data_path)
+nltk.download("punkt", download_dir=nltk_data_path)
 # --- Словарь: номер аптеки → район ---
 pharmacy_districts = {
     '34': 'Жетысуский', '40': 'Бостандыкский', '57': 'Жетысуский', '58': 'Алатауский',
