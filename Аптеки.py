@@ -12,6 +12,7 @@ from dotenv import load_dotenv
 import os
 nltk.download("punkt", quiet=True, force=True)
 nltk.download("stopwords", quiet=True, force=True)
+print(nltk.data.path)
 st.set_page_config(layout="wide")
 nltk.download("punkt")
 nltk.download("stopwords")
