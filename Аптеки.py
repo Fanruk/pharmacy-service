@@ -51,8 +51,10 @@ def stem_text(text):
 
 # --- Загрузка и подготовка данных ---
 @st.cache_data
+url_id = '1Mrkl_Fm59su0UddWNGo0vLAWklgDOIhF'
+url1 = f"https://drive.google.com/uc?id={file_id}"
 def load_data():
-    df = pd.read_csv("processed_products_data.csv")
+    df = pd.read_csv(url)
     df["Категории_строка"] = df["Категории"].apply(
         lambda x: " ".join(eval(x)) if isinstance(x, str) and x.startswith("[") else ""
     )
