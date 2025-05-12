@@ -51,7 +51,7 @@ def stem_text(text):
 
 # --- Загрузка и подготовка данных ---
 @st.cache_data
-url_id = '1Mrkl_Fm59su0UddWNGo0vLAWklgDOIhF'
+url_id = "1Mrkl_Fm59su0UddWNGo0vLAWklgDOIhF"
 url1 = f"https://drive.google.com/uc?id={file_id}"
 def load_data():
     df = pd.read_csv(url)
